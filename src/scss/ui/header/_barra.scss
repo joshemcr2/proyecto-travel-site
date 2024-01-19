@@ -1,0 +1,38 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.barra {
+  display: none;
+  background-color: rgba(255, 90, 96, 0.8);
+  padding: 1rem;
+  border-radius: 2rem;
+
+  @include m.tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__navegacion {
+    @include m.tablet {
+      display: flex;
+      gap: 4rem;
+    }
+  }
+  &__link {
+    color: v.$blanco;
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 2rem;
+    transition: .2s;
+  }
+  &__link:hover {
+    background-color: rgb(251, 69, 75);
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: .2s;
+  }
+  &__nombre {
+    color: v.$blanco;
+    font-size: 2.5rem;
+  }
+}
